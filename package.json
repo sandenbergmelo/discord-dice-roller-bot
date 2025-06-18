@@ -16,20 +16,21 @@
   "dependencies": {
     "@magicyan/discord": "1.4.9",
     "chalk": "^5.4.1",
-    "discord.js": "^14.19.3",
+    "discord.js": "^14.20.0",
     "fast-glob": "3.3.3",
-    "rou3": "0.6.2",
-    "zod": "^3.25.42"
+    "rou3": "0.7.1",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "3.0.12",
-    "@types/bun": "^1.2.15",
-    "eslint": "^9.28.0",
+    "@rocketseat/eslint-config": "^3.0.12",
+    "@types/bun": "^1.2.16",
+    "eslint": "^9.29.0",
+    "eslint-plugin-import-newlines": "^1.4.0",
     "fix-esm-import-path": "^1.10.1",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.1"
+    "vitest": "^3.2.4"
   },
   "imports": {
     "#database": [
