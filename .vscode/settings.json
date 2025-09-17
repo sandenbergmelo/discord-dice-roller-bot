@@ -42,12 +42,24 @@
       ]
     }
   ],
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "constants",
+      "base": "lib",
+      "color": "blue-600",
+      "fileNames": [
+        "constants.json"
+      ]
+    }
+  ],
   "material-icon-theme.folders.theme": "specific",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     ".env": ".env*",
-    "settings.json": "emojis.json, emojis.dev.json",
-    "package.json": "*lock.json, *.lock, *lock.yaml, *.lockb, *config.json, *config.ts, .eslintrc.json, .gitignore, .discloudignore, biome.json, .nvmrc"
+    "README.md": "*.md",
+    "discloud.config": ".discloudignore",
+    "constants.json": "emojis.json, emojis.dev.json",
+    "package.json": "*lock.json, *.lock, *lock.yaml, *.lockb, *config.json, *config.ts, .eslintrc.json, .gitignore, biome.json, .nvmrc"
   },
   "typescript.suggest.autoImports": true,
   "window.title": "${rootName}${separator}",
@@ -56,12 +68,16 @@
   "files.readonlyInclude": {
     "src/discord/base/**": true
   },
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports.ts": "explicit",
+    "source.organizeImports": "explicit",
+    "source.removeUnusedImports": "explicit"
+  },
   "cSpell.words": [
-    "AUTORESTART",
-    "azoxo",
-    "Constatic",
     "magicyan",
+    "reglob",
+    "reliverse",
     "resultx",
     "rootname"
-  ],
+  ]
 }
