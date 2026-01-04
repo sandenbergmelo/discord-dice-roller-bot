@@ -18,7 +18,7 @@ export default defineConfig([
       globals: {
         animated: 'readonly',
         withResponse: 'readonly',
-        flags: 'readonly',
+        // flags: 'readonly',
         required: 'readonly',
         inline: 'readonly',
         disabled: 'readonly',

@@ -3,60 +3,56 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "check": "tsc --noEmit && echo ✔ Ok",
-    "test": "vitest",
     "dev": "bun run --watch ./src/index.ts",
-    "build": "tsup && fix-esm-import-path dist",
-    "clean": "rimraf dist",
     "start": "bun run .",
-    "node:start": "node --env-file .env dist/index.js",
+    "clean": "rimraf dist",
+    "test": "vitest",
     "lint": "eslint .",
     "format": "eslint . --fix"
   },
   "dependencies": {
-    "@magicyan/discord": "1.4.9",
-    "chalk": "^5.4.1",
-    "discord.js": "^14.20.0",
-    "fast-glob": "3.3.3",
-    "rou3": "0.7.1",
-    "zod": "^3.25.67"
+    "@magicyan/discord": "1.5.2",
+    "@reliverse/reglob": "1.0.0",
+    "chalk": "5.5.0",
+    "discord.js": "14.22.1",
+    "rou3": "0.7.3",
+    "zod": "4.0.17"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "@rocketseat/eslint-config": "^3.0.12",
-    "@types/bun": "^1.2.16",
-    "eslint": "^9.29.0",
+    "@types/bun": "latest",
+    "eslint": "^9.35.0",
     "eslint-plugin-import-newlines": "^1.4.0",
-    "fix-esm-import-path": "^1.10.1",
     "rimraf": "^6.0.1",
-    "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
+    "typescript": "5.7.2",
     "vitest": "^3.2.4"
   },
   "imports": {
-    "#database": [
-      "./dist/database/index.js"
+    "#env": [
+      "./build/env.js"
     ],
     "#base": [
-      "./dist/discord/base/index.js"
+      "./build/discord/base/index.js"
     ],
     "#functions": [
-      "./dist/functions/index.js"
+      "./build/functions/index.js"
     ],
-    "#menus": [
-      "./dist/menus/index.js"
-    ],
-    "#settings": [
-      "./dist/settings/index.js"
-    ],
-    "#tools": [
-      "./dist/tools/index.js"
+    "#database": [
+      "./build/database/index.js"
     ],
     "#server": [
-      "./dist/server/index.js"
+      "./build/server/index.js"
     ],
-    "#lib": [
-      "./dist/lib/index.js"
+    "#menus": [
+      "./build/menus/index.js"
+    ],
+    "#tools": [
+      "./build/tools/index.js"
+    ],
+    "#lib/*": [
+      "./build/lib/*"
     ]
   },
-  "baseVersion": "1.2.7"
+  "baseVersion": "1.4.4"
 }

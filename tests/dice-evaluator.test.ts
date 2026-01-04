@@ -1,13 +1,15 @@
-import { describe, expect, it, vi } from 'vitest'
+import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { evaluateDiceExpression } from '../src/functions'
 
-vi.mock('@magicyan/discord', async () => ({
-  ...(await vi.importActual('@magicyan/discord')),
+beforeAll(() => {
+  vi.mock('@magicyan/discord', async () => ({
+    ...(await vi.importActual('@magicyan/discord')),
 
-  // Always returns the smallest value for predictability
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  randomNumber: (min: number, max: number) => min,
-}))
+    // Always returns the smallest value for predictability
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    randomNumber: (min: number, max: number) => min,
+  }))
+})
 
 describe('evaluateDiceExpression', () => {
   it('should return null for invalid expression', () => {

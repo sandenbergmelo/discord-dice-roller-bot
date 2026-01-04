@@ -25,7 +25,7 @@ createCommand({
     if (!diceRollResult) {
       await interaction.reply({
         content: 'Expressão de dados inválida.',
-        flags,
+        flags: ['Ephemeral'],
       })
 
       return
