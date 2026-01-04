@@ -1,4 +1,4 @@
-import constantsJson from '../../../constants.json' with { type: 'json' }
+import constantsJson from '../constants.json' with { type: 'json' }
 
 declare global {
   const constants: typeof constantsJson

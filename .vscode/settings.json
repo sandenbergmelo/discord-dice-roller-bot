@@ -1,5 +1,4 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
   "material-icon-theme.folders.associations": {
     "discord": "Client",
     "system": "Ci",
@@ -74,10 +73,10 @@
     "source.removeUnusedImports": "explicit"
   },
   "cSpell.words": [
+    "AUTORESTART",
+    "azoxo",
+    "constatic",
     "magicyan",
-    "reglob",
-    "reliverse",
-    "resultx",
-    "rootname"
+    "resultx"
   ]
 }

@@ -13,19 +13,6 @@ export default defineConfig([
     },
     rules: {
       'import-newlines/enforce': ['warn', { items: 40, 'max-len': 80 }],
-    },
-    languageOptions: {
-      globals: {
-        animated: 'readonly',
-        withResponse: 'readonly',
-        // flags: 'readonly',
-        required: 'readonly',
-        inline: 'readonly',
-        disabled: 'readonly',
-        __rootname: 'readonly',
-        autocomplete: 'readonly',
-        rootTo: 'readonly',
-      },
-    },
+    }
   },
 ])

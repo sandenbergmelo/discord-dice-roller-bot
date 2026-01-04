@@ -1,3 +1,4 @@
-import { bootstrap } from '#base'
+import { env } from '#env'
+import { bootstrap } from '@constatic/base'
 
-await bootstrap({ meta: import.meta })
+await bootstrap({ meta: import.meta, env })
